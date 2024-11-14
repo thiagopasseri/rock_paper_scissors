@@ -33,10 +33,14 @@ function getHumanChoice() {
 
 //function that plays a round: prompts the user, updates score and and logs winner
 function playRound() { 
-    let result = resultsTable[getHumanChoice()][getComputerChoice()];
+    //initialize the choices for the round
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+
+    let result = resultsTable[humanChoice][computerChoice];
     if (result == "tie") {
         // console.log("empate!");
-        alert(`TIE\nvocê: ${humanScore} \ncomp: ${computerScore}`);
+        alert(`TIE\n${choices[humanChoice]} e ${choices[computerChoice]} empatam!\nvocê: ${humanScore} \ncomp: ${computerScore}`);
 
     }
     else if (result =="human"){
@@ -46,7 +50,7 @@ function playRound() {
             alert("você ganhou o JOGO!");
             return;
         }
-        alert(`você ganhou!\nvocê: ${humanScore} \ncomp: ${computerScore}`);
+        alert(`você ganhou! ${choices[humanChoice]} ganha de ${choices[computerChoice]} \nvocê: ${humanScore} \ncomp: ${computerScore}`);
 
     } 
     else if (result =="computer") {
@@ -56,13 +60,12 @@ function playRound() {
             alert("você perdeu o JOGO!");
             return;
         }
-        alert(`você perdeu!\nvocê: ${humanScore} \ncomp: ${computerScore}`);
+        alert(`você perdeu! ${choices[computerChoice]} ganha de ${choices[humanChoice]} \nvocê: ${humanScore} \ncomp: ${computerScore}`);
 
     }
     // console.log(`você: ${humanScore} `);
     // console.log(`comp: ${computerScore}`);
 }
-
 //game loop
 while(humanScore < 5 && computerScore < 5)
 {
