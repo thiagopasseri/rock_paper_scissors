@@ -1,0 +1,59 @@
+body {
+    height:80vh;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    min-height: 50px;
+}
+h1,p {
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+#btn-container {
+    width:40%;
+    height:200px;
+    background-color: aqua;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+#go-btn{
+    height: 150px;
+    width:40%;
+    margin-top:30px;
+}
+.choice-btn {
+    flex:1 1 0;
+}
+
+#visual-container{
+    height:100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#images{
+    height:60%;
+    background-color: rgb(46, 255, 172);
+    flex-basis:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#result-text {
+    font-size: 5em;
+}
+
+#computer-choice-text, #score {
+    font-size: 2em;
+}
